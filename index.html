@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Page</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    /* Center the modal content */
+    .modal-content {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Modal Structure -->
+<div id="loading-modal" class="modal">
+  <div class="modal-content">
+    <h4>Welcome to my PHP project</h4>
+    <p>Copyright by [Your Name]</p>
+  </div>
+</div>
+
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  // Initialize Materialize components
+  document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.querySelector('#loading-modal');
+    var instance = M.Modal.init(modal);
+    
+    // Open modal on page load
+    instance.open();
+
+    // Close modal after a few seconds
+    setTimeout(function() {
+      instance.close();
+      window.location.href = 'login.html'; // Redirect to login page
+    }, 3000); // Adjust the time as needed (3000 milliseconds = 3 seconds)
+  });
+</script>
+
+</body>
+</html>
